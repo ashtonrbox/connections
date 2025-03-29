@@ -284,3 +284,7 @@ div#historyPlacement {
     color: white;
     display: hidden;
 }
+
+.smallbr {
+    height: 11px;
+}
