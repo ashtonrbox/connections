@@ -282,7 +282,7 @@ div#historyPlacement {
 .remove {
     background-color: black;
     color: white;
-    display: hidden;
+    display: none;
 }
 
 .smallbr {
