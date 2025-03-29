@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Connections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div id="window">
+        <div id="connections">
+
+            <div id="complete">
+
+            </div>
+
+            <div id="incomplete">
+
+                <div class="tile"><p class="tileText" id="LINKIN PARK">LINKIN PARK</p></div>
+                <div class="tile"><p class="tileText" id="SMITHS">SMITHS</p></div>
+                <div class="tile"><p class="tileText" id="EDITORS">EDITORS</p></div>
+                <div class="tile"><p class="tileText" id="U2">U2</p></div>
+
+                <div class="tile"><p class="tileText" id="COKE">COKE</p></div>
+                <div class="tile"><p class="tileText" id="JEEP">JEEP</p></div>
+                <div class="tile"><p class="tileText" id="WINNING LOTTO">WINNING LOTTO</p></div>
+                <div class="tile"><p class="tileText" id="MIFFY LAMP">MIFFY LAMP</p></div>
+
+                <div class="tile"><p class="tileText" id="1">1</p></div>
+                <div class="tile"><p class="tileText" id="2">2</p></div>
+                <div class="tile"><p class="tileText" id="3">3</p></div>
+                <div class="tile"><p class="tileText" id="4">4</p></div>
+
+                <div class="tile"><p class="tileText" id="HENRY">HENRY</p></div>
+                <div class="tile"><p class="tileText" id="ARIA">ARIA</p></div>
+                <div class="tile"><p class="tileText" id="TORTOISE">TORTOISE</p></div>
+                <div class="tile"><p class="tileText" id="TIME MACHINE">TIME MACHINE</p></div>
+                
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div id="controls">
+            <button class="button" id="shuffle">Shuffle</button>
+            <button class="button" id="deselect" disabled>Deselect All</button>
+            <button class="button submit" id="submit" disabled>Submit</button>
+        </div>
+
+    </div>
+
+
+    <div id="oneAway"><p id="oneAwayAlert">One away...</p></div>
+
+
+    <div id="splash">
+
+        <div id="welcome">
+
+            <img src="connections.png" style="width: 60px;" alt="">
+
+            <p>Connections</p>
+            
+            <button class="button" id="start">Start</button>
+        </div>
+
+        <div id="finished">
+            <p>Congratulations!</p>
+            <div id="historyPlacement">
+
+            </div>
+
+            <br>
+
+            <button class="button" id="start" onclick="document.getElementById(`splash`).style.display = `none`">Admire puzzle</button>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
