@@ -467,6 +467,7 @@ function migrate(group) {
                 document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
                 document.getElementById("splash").style.display = "flex";
                 document.getElementById("finished").style.display = "flex";
+                document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
             }, 4500)
 
         }
