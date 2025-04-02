@@ -288,3 +288,7 @@ div#historyPlacement {
 .smallbr {
     height: 11px;
 }
+
+a.changeHREF {
+    text-decoration: none;
+}
