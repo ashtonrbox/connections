@@ -463,14 +463,33 @@ function migrate(group) {
                 document.getElementById("historyPlacement").appendChild(rowDiv)
             })
 
-            setTimeout(() => {
-                document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
-                document.getElementById("splash").style.display = "flex";
-                document.getElementById("finished").style.display = "flex";
-                document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
-            }, 4500)
+setTimeout(() => {
+    document.getElementById("splash").style.animation = "simpleAppear 1 0.5s ease";
+    document.getElementById("splash").style.display = "flex";
+    document.getElementById("finished").style.display = "flex";
+    document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
 
+
+    let url = new URL(document.location).href;
+
+    if (url.split("?")[1]) {
+        let [key, value] = url.split("?")[1].split("=")
+
+        if (key === "w") {
+
+            console.log("Wordle data found: " + value)
+
+            document.querySelectorAll(".changeHREF").forEach(href => {
+                href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${value}&c=${history.length + 1}`)
+            })
+
+        } else {
+            document.querySelectorAll(".changeHREF").forEach(href => {
+                href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${history.length + 1}`)
+            })
         }
+    }
+}, 4500)
 
         if (document.querySelectorAll(".selectedTile").length > 3) {
             document.getElementById("submit").removeAttribute("disabled");
