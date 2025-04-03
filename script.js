@@ -470,25 +470,30 @@ function migrate(group) {
                 document.querySelectorAll(".remove").forEach(removeButton => { removeButton.style.display = "block" })
 
 
-                let url = new URL(document.location).href;
+                
+let url = new URL(document.location).href;
 
-                if (url.split("?")[1]) {
-                    let [key, value] = url.split("?")[1].split("=")
+if (url.split("?")[1]) {
+    let [key, value] = url.split("?")[1].split("=")
 
-                    if (key === "w") {
+    if (key === "w") {
 
-                        console.log("Wordle data found: " + value)
+        console.log("Wordle data found: " + value)
 
-                        document.querySelectorAll(".changeHREF").forEach(href => {
-                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${value}&c=${history.length + 1}`)
-                        })
+        document.querySelectorAll(".changeHREF").forEach(href => {
+            href.setAttribute("href", `https://ashtonrbox.github.io/hub?w=${value}&c=${history.length}`)
+        })
 
-                    } else {
-                        document.querySelectorAll(".changeHREF").forEach(href => {
-                            href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${history.length + 1}`)
-                        })
-                    }
-                }
+    } else {
+        document.querySelectorAll(".changeHREF").forEach(href => {
+            href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${history.length}`)
+        })
+    }
+} else {
+    document.querySelectorAll(".changeHREF").forEach(href => {
+        href.setAttribute("href", `https://ashtonrbox.github.io/hub?c=${history.length}`)
+    })
+}
             }, 4500)
 
             if (document.querySelectorAll(".selectedTile").length > 3) {
