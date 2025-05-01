@@ -6,12 +6,12 @@ let history = [];
 
 let group1 = ["LINKIN PARK", "SMITHS", "EDITORS", "U2"];
 let group2 = ["COKE", "JEEP", "WINNING LOTTO", "MIFFY LAMP"];
-let group3 = ["1", "2", "3", "4"];
+let group3 = ["LEMON", "SEEDS", "CUCUMBER", "JARS"];
 let group4 = ["HENRY", "ARIA", "TORTOISE", "TIME MACHINE"];
 
 let group1Name = "MUM'S MOST LISTENED TO BANDS";
 let group2Name = "THINGS MUM WANTS";
-let group3Name = "BLANK";
+let group3Name = "PARTS OF MUM'S LUNCH";
 let group4Name = "NOUNS ILLUSTATED BY MUM";
 
 let cannotContinue = false;
